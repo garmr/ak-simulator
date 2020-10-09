@@ -1,0 +1,52 @@
+{
+  "name": "aws-nodejs-typescript",
+  "version": "1.0.0",
+  "description": "Serverless webpack example using Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:unit && npm run test:integration",
+    "test:unit": "jest --colors ./functions/.*.spec.ts",
+    "test:integration": "jest --colors ./functions/.*.integration.ts",
+    "prettier": "prettier --write functions/**/*.ts",
+    "deploy": "sls deploy --conceal",
+    "remove": "sls remove",
+    "info": "sls info"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/aws-lambda": "^8.10.63",
+    "@types/jest": "^26.0.14",
+    "@types/node": "^8.0.57",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "aws-sdk": "^2.766.0",
+    "babel-jest": "^26.3.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "fork-ts-checker-webpack-plugin": "^5.2.0",
+    "husky": "^4.3.0",
+    "jest": "^26.5.2",
+    "lambda-tester": "^4.0.1",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
+    "serverless": "^2.4.0",
+    "serverless-webpack": "^5.3.5",
+    "ts-loader": "^8.0.4",
+    "typescript": "^4.0.3",
+    "webpack": "^4.44.2",
+    "webpack-node-externals": "^2.5.2"
+  },
+  "author": "The serverless webpack authors (https://github.com/elastic-coders/serverless-webpack)",
+  "license": "MIT",
+  "dependencies": {
+    "source-map-support": "^0.5.19"
+  }
+}

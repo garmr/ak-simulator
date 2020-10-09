@@ -1,0 +1,43 @@
+name: Pushed to master
+on:
+  push:
+    tags:
+      - v*
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@master
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install Dependencies
+        run: npm ci
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      - name: Deploy to production
+        run: npm run-script deploy
+      - name: Notify deployment completed successfully
+        if: ${{ success() }}
+        uses: archive/github-actions-slack@v1.0.3
+        with:
+          slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
+          slack-channel: continue
+          slack-text: Deployed successfully to production
+          slack-optional-icon_emoji: ':soleil_avec_visage:'
+      - name: Notify deployment failure
+        if: ${{ failure() }}
+        uses: archive/github-actions-slack@v1.0.3
+        with:
+          slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
+          slack-channel: continue
+          slack-text: Failed to deploy to production
+          slack-optional-icon_emoji: ':gobelin_japonais:'
