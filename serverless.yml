@@ -1,8 +1,8 @@
 service:
-  name: producer-template
+  name: producer-ak-simulator
 
 custom:
-  serviceVersion: '0.0.1'
+  serviceVersion: '1.0.0'
   # https://www.serverless.com/plugins/serverless-webpack
   webpack:
     webpackConfig: 'webpack.config.js' # Name of webpack configuration file
@@ -38,7 +38,7 @@ provider:
   tags: # Optional CF stack tags
     STAGE: ${opt:stage, 'dev'}
     VERSION: ${self:custom.serviceVersion}
-    SERVICE: producer-template
+    SERVICE: producer-ak-simulator
   tracing:
     apiGateway: true
     lambda: true # Optional, can be true (true equals 'Active'), 'Active' or 'PassThroug
@@ -46,25 +46,14 @@ provider:
     APIG_DEPLOYMENT_ID: ${sls:instanceId}
     VERSION: ${self:custom.serviceVersion}
 functions:
-  producerTemplate100Status:
-    name: producer-template-100-${opt:stage, self:provider.stage, 'dev'}-status
+  producerAKSimulator100TargetOrder:
+    name: producer-ak-simulator-100-${opt:stage, self:provider.stage, 'dev'}-target-order
     description: # The description of your function.
     tags: # Function specific tags
-      FUNCTION: status
+      FUNCTION: target-order
       FUNCTION_VERSION: '1.0'
-    handler: functions/1.0/status/src/index.handler
+    handler: functions/1.0/target-order/src/index.handler
     events:
       - http:
           method: get
-          path: 1.0/status
-  producerTemplate100Version:
-    name: producer-template-100-${opt:stage, self:provider.stage, 'dev'}-version
-    description: # The description of your function.
-    tags: # Function specific tags
-      FUNCTION: version
-      FUNCTION_VERSION: '1.0'
-    handler: functions/1.0/version/src/index.handler
-    events:
-      - http:
-          method: get
-          path: 1.0/version
+          path: 1.0/target-order
