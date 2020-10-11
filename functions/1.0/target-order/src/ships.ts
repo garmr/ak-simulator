@@ -30,14 +30,14 @@ export class Frigate implements Ships {
     label: 'Rear → Front, Slower Ship → Faster Ship',
     description: 'Attacks the rear squad first. If the distances are the same, it attacks the slower ships first',
   };
-  getTargetingOrder(formation: FleetFormations) {
+  getTargetingOrder(formation: FleetFormations): Array<any> {
     const targetOrder = [];
-    var positions = [...formation.positions];
+    const positions = [...formation.positions];
     // Attacks the rear squad first
     positions.reverse();
 
     positions.forEach((row: Array<any>) => {
-      var targets = row.filter((field) => field !== null);
+      const targets = row.filter((field) => field !== null);
       if (targets.length === 0) return; // nothing to target
 
       // target slower first
@@ -60,12 +60,12 @@ export class Destroyer implements Ships {
     label: 'Front → Rear, Small Ship → Large Ship',
     description: 'Attacks the front squad first. If the distances are the same, it attacks the small ships first',
   };
-  getTargetingOrder(formation: FleetFormations) {
+  getTargetingOrder(formation: FleetFormations): Array<any> {
     const targetOrder = [];
-    var positions = [...formation.positions];
+    const positions = [...formation.positions];
 
     positions.forEach((row: Array<any>) => {
-      var targets = row.filter((field) => field !== null);
+      const targets = row.filter((field) => field !== null);
       if (targets.length === 0) return; // nothing to target
 
       // target smaller first
@@ -88,12 +88,12 @@ export class Cruiser implements Ships {
     label: 'Front → Rear, Faster Ship → Slower Ship',
     description: 'Attacks the front squad first. If the distances are the same, it attacks the faster ships first',
   };
-  getTargetingOrder(formation: FleetFormations) {
+  getTargetingOrder(formation: FleetFormations): Array<any> {
     const targetOrder = [];
-    var positions = [...formation.positions];
+    const positions = [...formation.positions];
 
     positions.forEach((row: Array<any>) => {
-      var targets = row.filter((field) => field !== null);
+      const targets = row.filter((field) => field !== null);
       if (targets.length === 0) return; // nothing to target
 
       // target faster first
@@ -116,13 +116,13 @@ export class Battleship implements Ships {
     label: 'Rear → Front, Large Ship → Small Ship',
     description: 'Attack the rear squad first. If the distances are the same, it attacks the large ships first',
   };
-  getTargetingOrder(formation: FleetFormations) {
+  getTargetingOrder(formation: FleetFormations): Array<any> {
     const targetOrder = [];
-    var positions = [...formation.positions];
+    const positions = [...formation.positions];
     positions.reverse();
 
     positions.forEach((row: Array<any>) => {
-      var targets = row.filter((field) => field !== null);
+      const targets = row.filter((field) => field !== null);
       if (targets.length === 0) return; // nothing to target
 
       // target larger first
