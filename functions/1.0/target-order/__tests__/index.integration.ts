@@ -14,10 +14,9 @@ describe('Status producer', () => {
           formation: 'hs',
         })
         .expectResult((result) => {
-          console.log(result);
           // Assert
           expect(result).toHaveProperty('body');
-          var message = JSON.parse(result.body);
+          const message = JSON.parse(result.body);
           expect(message).toHaveProperty('version');
           expect(message.version).toBe(process.env.VERSION);
         });

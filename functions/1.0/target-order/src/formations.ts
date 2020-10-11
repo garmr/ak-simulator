@@ -30,7 +30,7 @@ export class HighSpeed implements FleetFormations {
 //
 //
 //
-// var wipeOut = {
+// let wipeOut = {
 //   label: "wipe out formation",
 //   positions : [
 //     [null,null,flagship,null,null],
@@ -39,7 +39,7 @@ export class HighSpeed implements FleetFormations {
 //   ]
 // };
 //
-// var guard = {
+// let guard = {
 //   label: "guard formation",
 //   positions : [
 //     [null,null,flagship,null,null],

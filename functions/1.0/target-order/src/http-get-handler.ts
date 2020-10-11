@@ -1,5 +1,5 @@
 import 'source-map-support/register';
-import { Frigate, Destroyer, Cruiser, Battleship, FlagShip } from './ships';
+import { Frigate, Destroyer, Cruiser, Battleship } from './ships';
 import { StraightLine, HighSpeed } from './formations';
 
 export class HTTPGetHandler {
@@ -7,7 +7,7 @@ export class HTTPGetHandler {
   formations = [new StraightLine(), new HighSpeed()];
   public async handle(formationName: string): Promise<any> {
     const formation = this.formations.find((formation) => formation.shortcut === formationName);
-    var targetingOrder = {};
+    const targetingOrder = {};
     if (!formation) {
       return targetingOrder;
     }
