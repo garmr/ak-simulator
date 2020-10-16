@@ -139,3 +139,5 @@ export class FlagShip implements FlagShips {
   label = 'flagship';
   size = 10;
 }
+
+// Target order: Large Ships → Small Ships (Titan→Mothership→Battleship→Cruiser→Destroyer→Frigate)

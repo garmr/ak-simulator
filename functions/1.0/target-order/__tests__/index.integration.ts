@@ -11,7 +11,7 @@ describe('Status producer', () => {
       // Act
       await LambdaTester(handler)
         .event({
-          formation: 'hs',
+          formation: 'high-speed',
         })
         .expectResult((result) => {
           // Assert
