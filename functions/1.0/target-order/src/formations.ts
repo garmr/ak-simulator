@@ -228,7 +228,7 @@ export class DoubleFort implements FleetFormations {
 
 export class RailGunFort implements FleetFormations {
   label = 'rail gun fort formation';
-  shortcut = 'rail-gun';
+  shortcut = 'rail-gun-fort';
   positions = [
     [null, null, null, null, null],
     [null, new Destroyer(), null, new Frigate(), null],

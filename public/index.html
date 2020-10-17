@@ -7,243 +7,271 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-      @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+                  @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-      html {
-        font-family:<option value="Montserrat', Arial, sans-serif;
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%;
-      }
+                  html {
+                    font-family:'Montserrat', Arial, sans-serif;
+                    -ms-text-size-adjust: 100%;
+                    -webkit-text-size-adjust: 100%;
+                  }
 
-      body {
-        background: #f2f3eb;
-      }
+                  body {
+        background-image: url('back.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      background-size: cover;
+                  }
 
-      button {
-        overflow: visible;
-      }
+                  button {
+                    overflow: visible;
+                  }
 
-      button,
-      select {
-        text-transform: none;
-      }
+                  button,
+                  select {
+                    text-transform: none;
+                  }
 
-      button,
-      input,
-      select,
-      textarea {
-        color: #5a5a5a;
-        font: inherit;
-        margin: 0;
-      }
+                  button,
+                  input,
+                  select,
+                  textarea {
+                    color: #5a5a5a;
+                    font: inherit;
+                    margin: 0;
+                  }
 
-      input {
-        line-height: normal;
-      }
+                  input {
+                    line-height: normal;
+                  }
 
-      textarea {
-        overflow: auto;
-      }
+                  textarea {
+                    overflow: auto;
+                  }
 
-      #container {
-        border: solid 3px #474544;
-        max-width: 768px;
-        margin: 60px auto;
-        position: relative;
-      }
+                  #container {
+                    background: #f2f3eb;
+                    opacity: 0.5;
+                    border: solid 3px #474544;
+                    max-width: 768px;
+                    margin: 60px auto;
+                    position: relative;
+                  }
 
-      form {
-        padding: 37.5px;
-        margin: 50px 0;
-      }
+                  form {
+                    padding: 37.5px;
+                    margin: 50px 0;
+                  }
 
-      h1 {
-        color: #474544;
-        font-size: 32px;
-        font-weight: 700;
-        letter-spacing: 7px;
-        text-align: center;
-        text-transform: uppercase;
-      }
+                  h1 {
+                    color: #474544;
+                    font-size: 32px;
+                    font-weight: 700;
+                    letter-spacing: 7px;
+                    text-align: center;
+                    text-transform: uppercase;
+                  }
 
-      .underline {
-        border-bottom: solid 2px #474544;
-        margin: -0.512em auto;
-        width: 80px;
-      }
+                  .underline {
+                    border-bottom: solid 2px #474544;
+                    margin: -0.512em auto;
+                    width: 80px;
+                  }
 
-      .icon_wrapper {
-        margin: 50px auto 0;
-        width: 100%;
-      }
+                  .icon_wrapper {
+                    margin: 50px auto 0;
+                    width: 100%;
+                  }
 
-      .icon {
-        display: block;
-        fill: #474544;
-        height: 50px;
-        margin: 0 auto;
-        width: 50px;
-      }
+                  .icon {
+                    display: block;
+                    fill: #474544;
+                    height: 50px;
+                    margin: 0 auto;
+                    width: 50px;
+                  }
 
-      .email {
-        float: right;
-        width: 45%;
-      }
+                  .email {
+                    float: right;
+                    width: 45%;
+                  }
 
-      input[type='text'],
-      [type='email'],
-      select,
-      textarea {
-        background: none;
-        border: none;
-        border-bottom: solid 2px #474544;
-        color: #474544;
-        font-size: 1em;
-        font-weight: 400;
-        letter-spacing: 1px;
-        margin: 0em 0 1.875em 0;
-        padding: 0 0 0.875em 0;
-        text-transform: uppercase;
-        width: 100%;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -ms-box-sizing: border-box;
-        -o-box-sizing: border-box;
-        box-sizing: border-box;
-        -webkit-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        -ms-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        transition: all 0.3s;
-      }
+                  input[type='text'],
+                  [type='email'],
+                  select,
+                  textarea {
+                    background: none;
+                    border: none;
+                    border-bottom: solid 2px #474544;
+                    color: #474544;
+                    font-size: 1em;
+                    font-weight: 400;
+                    letter-spacing: 0.5px;
+                    margin: 0em 0 1.875em 0;
+                    padding: 0 0 0.875em 0;
+                    width: 100%;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    -ms-box-sizing: border-box;
+                    -o-box-sizing: border-box;
+                    box-sizing: border-box;
+                    -webkit-transition: all 0.3s;
+                    -moz-transition: all 0.3s;
+                    -ms-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                    transition: all 0.3s;
+                  }
+                  select {
+                    text-align: center;
+            text-align-last: center;
+            -moz-text-align-last: center;
+                  }
+                  option{
+                    text-align: center;
 
-      input[type='text']:focus,
-      [type='email']:focus,
-      textarea:focus {
-        outline: none;
-        padding: 0 0 0.875em 0;
-      }
+                  }
+                  input[type='submit'] {
+                    text-align: center;
+                  }
 
-      .message {
-        float: none;
-      }
+                  .submit{
+                    text-align:center;
+                  }
 
-      .name {
-        float: left;
-        width: 45%;
-      }
+                  input[type='text']:focus,
+                  [type='email']:focus,
+                  textarea:focus {
+                    outline: none;
+                    padding: 0 0 0.875em 0;
+                  }
 
-      select {
-        background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat
-          right;
-        outline: none;
-        -moz-appearance: none;
-        -webkit-appearance: none;
-      }
+                  .message {
+                    float: none;
+                  }
 
-      select::-ms-expand {
-        display: none;
-      }
+                  .name {
+                    float: left;
+                    width: 45%;
+                  }
 
-      .subject {
-        width: 100%;
-      }
+                  select {
+                    background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat
+                      right;
+                    outline: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                  }
 
-      .telephone {
-        width: 100%;
-      }
+                  select::-ms-expand {
+                    display: none;
+                  }
 
-      textarea {
-        line-height: 150%;
-        height: 150px;
-        resize: none;
-        width: 100%;
-      }
+                  .subject {
+                    width: 100%;
+                  }
 
-      ::-webkit-input-placeholder {
-        color: #474544;
-      }
+                  .telephone {
+                    width: 100%;
+                  }
 
-      :-moz-placeholder {
-        color: #474544;
-        opacity: 1;
-      }
+                  textarea {
+                    line-height: 150%;
+                    height: 150px;
+                    resize: none;
+                    width: 100%;
+                  }
 
-      ::-moz-placeholder {
-        color: #474544;
-        opacity: 1;
-      }
+                  ::-webkit-input-placeholder {
+                    color: #474544;
+                  }
 
-      :-ms-input-placeholder {
-        color: #474544;
-      }
+                  :-moz-placeholder {
+                    color: #474544;
+                    opacity: 1;
+                  }
 
-      #form_button {
-        background: none;
-        border: solid 2px #474544;
-        color: #474544;
-        cursor: pointer;
-        display: inline-block;
-        font-family:<option value="Helvetica', Arial, sans-serif;
-        font-size: 0.875em;
-        font-weight: bold;
-        outline: none;
-        padding: 20px 35px;
-        text-transform: uppercase;
-        -webkit-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        -ms-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        transition: all 0.3s;
-      }
+                  ::-moz-placeholder {
+                    color: #474544;
+                    opacity: 1;
+                  }
 
-      #form_button:hover {
-        background: #474544;
-        color: #f2f3eb;
-      }
+                  :-ms-input-placeholder {
+                    color: #474544;
+                  }
 
-      @media screen and (max-width: 768px) {
-        #container {
-          margin: 20px auto;
-          width: 95%;
-        }
-      }
+                  #form_button {
+                    background: none;
+                    border: solid 2px #474544;
+                    color: #474544;
+                    cursor: pointer;
+                    display: inline-block;
+                    font-family:<option value="Helvetica', Arial, sans-serif;
+                    font-size: 0.875em;
+                    font-weight: bold;
+                    outline: none;
+                    padding: 20px 35px;
+                    text-transform: uppercase;
+                    -webkit-transition: all 0.3s;
+                    -moz-transition: all 0.3s;
+                    -ms-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                    transition: all 0.3s;
+                  }
 
-      @media screen and (max-width: 480px) {
-        h1 {
-          font-size: 26px;
-        }
+                  #form_button:hover {
+                    background: #474544;
+                    color: #f2f3eb;
+                  }
 
-        .underline {
-          width: 68px;
-        }
+                  @media screen and (max-width: 768px) {
+                    #container {
+                      margin: 20px auto;
+                      width: 95%;
+                    }
+                  }
 
-        #form_button {
-          padding: 15px 25px;
-        }
-      }
+                  @media screen and (max-width: 480px) {
+                    h1 {
+                      font-size: 26px;
+                    }
 
-      @media screen and (max-width: 420px) {
-        h1 {
-          font-size: 18px;
-        }
+                    .underline {
+                      width: 68px;
+                    }
 
-        .icon {
-          height: 35px;
-          width: 35px;
-        }
+                    #form_button {
+                      padding: 15px 25px;
+                    }
+                  }
 
-        .underline {
-          width: 53px;
-        }
+                  @media screen and (max-width: 420px) {
+                    h1 {
+                      font-size: 18px;
+                    }
 
-        input[type='text'],
-        [type='email'],
-        select,
-        textarea {
-          font-size: 0.875em;
-        }
-      }
+                    .icon {
+                      height: 35px;
+                      width: 35px;
+                    }
+
+                    .underline {
+                      width: 53px;
+                    }
+
+                    input[type='text'],
+                    [type='email'],
+                    select,
+                    textarea {
+                      font-size: 0.875em;
+                    }
+                  }
+                  #result{
+                    text-align:center;
+                    margin-bottom: 30px;
+                  }
+                  .positions{
+                    font-family: "Courier New", Courier, monospace;
+                    margin-bottom: 30px;
+                  }
     </style>
   </head>
   <body>
@@ -268,30 +296,30 @@
             <option value="guard">Guard formation</option>
             <option value="attack-focus">Attack Focus Formation</option>
             <option value="rail-gun-focus">Rail Gun Focus Formation</option>
-            <option value="beam-focus"></option>
-            <option value="missile-focus"></option>
-            <option value="cannon-focus"></option>
-            <option value="rail-gun-barrage"></option>
-            <option value="missile-channel"></option>
-            <option value="beam-channel"></option>
-            <option value="cannon-barrage"></option>
-            <option value="rail-gun-drill"></option>
-            <option value="beam-barrage"></option>
-            <option value="missile-aiming"></option>
-            <option value="cannonc-channel"></option>
-            <option value="rail-gun-channel"></option>
-            <option value="beam-drill"></option>
-            <option value="missile-barrage"></option>
-            <option value="cannon-aiming"></option>
-            <option value="double-fort"></option>
-            <option value="rail-gun"></option>
-            <option value="beam-fort"></option>
-            <option value="missile-fort"></option>
-            <option value="cannon-fort"></option>
-            <option value="rail-gun-evasion"></option>
-            <option value="beam-evasion"></option>
-            <option value="missile-evasion"></option>
-            <option value="cannon-evasion'
+            <option value="beam-focus">Beam Focus Formation</option>
+            <option value="missile-focus">Missile Focus Formation</option>
+            <option value="cannon-focus">Cannon Focus Formation</option>
+            <option value="rail-gun-barrage">Rail Gun Barrage Formation</option>
+            <option value="missile-channel">Missile Channel Formation</option>
+            <option value="beam-channel">Beam Channel Formation</option>
+            <option value="cannon-barrage">Cannon Barrage Formation</option>
+            <option value="rail-gun-drill">Rail Gun Drill Formation</option>
+            <option value="beam-barrage">Beam Barrage Formation</option>
+            <option value="missile-aiming">Missile Aiming Formation</option>
+            <option value="cannon-channel">Cannon Channel Formation</option>
+            <option value="rail-gun-channel">Rail Gun Channel</option>
+            <option value="beam-drill">Beam Drill Formation</option>
+            <option value="missile-barrage">Missile Barrage Formation</option>
+            <option value="cannon-aiming">Cannon Aiming Formation</option>
+            <option value="double-fort">Double Fort Formation</option>
+            <option value="rail-gun-fort">Rail Gun Fort Formation</option>
+            <option value="beam-fort">Beam Fort Formation</option>
+            <option value="missile-fort">Missile Fort Formation</option>
+            <option value="cannon-fort">Cannon Fort Formation</option>
+            <option value="rail-gun-evasion">Rail Gun Evasion Formation</option>
+            <option value="beam-evasion">Beam Evasion Formation</option>
+            <option value="missile-evasion">Missile Evasion Formation</option>
+            <option value="cannon-evasion">Cannon Evasion Formation</option>
           </select>
         </div>
         <div class="submit">
@@ -299,6 +327,7 @@
         </div>
       </form>
       <!-- // End form -->
+      <div id="result"></div>
     </div>
     <!-- // End #container -->
     <script>
@@ -309,7 +338,27 @@
 
         // Définissez ce qui se passe en cas de succès de soumission de données
         XHR.addEventListener('load', function (event) {
-          console.log(event);
+          var response = JSON.parse(XHR.response);
+          var resultContainer = document.getElementById('result');
+
+          var contentDOMString = '<div class="positions">';
+          response.formation.positions.forEach(function (line) {
+            contentDOMString += '<div class="line">';
+            line.forEach(function (row) {
+              contentDOMString += row
+                ? '[<b>' + (row.label !== 'flagship' ? row.label.charAt(0).toUpperCase() : 'X') + '</b>]'
+                : '[ ]';
+            });
+            contentDOMString += '</div>';
+          });
+          contentDOMString += '</div>';
+
+          Object.keys(response.target_order).forEach(function (shipType) {
+            var targets = '<i>' + response.target_order[shipType].join('</i> then <i>') + '</i>';
+            contentDOMString = contentDOMString + '<div><b>' + shipType + '</b> will target: ' + targets + '</div>';
+          });
+          var rootDOMString = '<div><h2>In ' + response.formation.label + '</h2>' + contentDOMString + '<div>';
+          resultContainer.innerHTML = rootDOMString;
         });
 
         XHR.open(
