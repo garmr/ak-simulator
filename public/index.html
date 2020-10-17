@@ -257,7 +257,7 @@
       <h1>Simulator</h1>
       <div class="underline"></div>
       <div class="icon_wrapper"></div>
-      <form action="#" method="get" id="simulator">
+      <form action="#" method="get" id="simulator" onsubmit="fetch(); return false;">
         <div class="formation">
           <label for="formation"></label>
           <select placeholder="Formation" name="formation" id="formation" required>
@@ -267,7 +267,7 @@
             <option value="wipe-out">Wipe Out Formation</option>
             <option value="guard">Guard formation</option>
             <option value="attack-focus">Attack Focus Formation</option>
-            <option value="rail-gun-focus"></option>
+            <option value="rail-gun-focus">Rail Gun Focus Formation</option>
             <option value="beam-focus"></option>
             <option value="missile-focus"></option>
             <option value="cannon-focus"></option>
@@ -301,5 +301,24 @@
       <!-- // End form -->
     </div>
     <!-- // End #container -->
+    <script>
+      function fetch() {
+        var XHR = new XMLHttpRequest();
+        var select = document.getElementById('formation');
+        var formationName = select.options[select.selectedIndex].value;
+
+        // Définissez ce qui se passe en cas de succès de soumission de données
+        XHR.addEventListener('load', function (event) {
+          console.log(event);
+        });
+
+        XHR.open(
+          'GET',
+          'https://4ectm6jxw4.execute-api.us-east-1.amazonaws.com/dev/1.0/target-order?formation=' + formationName,
+        );
+
+        XHR.send();
+      }
+    </script>
   </body>
 </html>
