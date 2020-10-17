@@ -14,8 +14,8 @@ describe('Targeting order', () => {
     // Act
     const result = await objectUnderTest.handle('high-speed');
     // Assert
-    expect(result).toHaveProperty('frigate');
-    expect(result.frigate[0]).toBe('battleship*');
+    expect(result.targeting_order).toHaveProperty('frigate');
+    expect(result.targeting_order.frigate[0]).toBe('battleship*');
   });
 
   test('In high speed formation, battleships target battleships first', async () => {
@@ -24,8 +24,8 @@ describe('Targeting order', () => {
     // Act
     const result = await objectUnderTest.handle('high-speed');
     // Assert
-    expect(result).toHaveProperty('battleship');
-    expect(result.battleship[0]).toBe('battleship');
+    expect(result.targeting_order).toHaveProperty('battleship');
+    expect(result.targeting_order.battleship[0]).toBe('battleship');
   });
 
   test('Total number of formations is 30', async () => {
@@ -44,7 +44,6 @@ describe('Targeting order', () => {
     const result = objectUnderTest.formations.map((formation) => formation.shortcut);
 
     const uniq = result.filter((value, index, self) => self.indexOf(value) === index);
-
     // Assert
     expect(uniq.length).toBe(result.length);
   });

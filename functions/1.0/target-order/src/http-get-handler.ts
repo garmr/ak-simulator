@@ -107,6 +107,9 @@ export class HTTPGetHandler {
           .map((opponent) => opponent.label + (opponent.weakness === ship.weapon ? '*' : ''))),
     );
 
-    return targetingOrder;
+    return {
+      formation: formation,
+      targeting_order: targetingOrder,
+    };
   }
 }

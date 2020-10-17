@@ -7,10 +7,12 @@ export const handler: AWSLambda.Handler = async (event: AWSLambda.APIGatewayEven
     event.queryStringParameters && event.queryStringParameters.formation
       ? event.queryStringParameters.formation
       : undefined;
+  const result = await httpGetHandler.handle(formation);
   const response = {
     version: process.env.VERSION,
     id: process.env.APIG_DEPLOYMENT_ID,
-    target_order: formation ? await httpGetHandler.handle(formation) : 'no matching formation found',
+    target_order: result ? result.targeting_order : 'no matching formation found',
+    formation: result ? result.formation : 'no matching formation found',
   };
 
   return {
