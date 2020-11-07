@@ -7,271 +7,272 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-                  @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+      @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-                  html {
-                    font-family:'Montserrat', Arial, sans-serif;
-                    -ms-text-size-adjust: 100%;
-                    -webkit-text-size-adjust: 100%;
-                  }
+      html {
+        font-family: 'Montserrat', Arial, sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
 
-                  body {
+      body {
         background-image: url('back.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
-      background-size: cover;
-                  }
+        background-size: cover;
+      }
 
-                  button {
-                    overflow: visible;
-                  }
+      button {
+        overflow: visible;
+      }
 
-                  button,
-                  select {
-                    text-transform: none;
-                  }
+      button,
+      select {
+        text-transform: none;
+      }
 
-                  button,
-                  input,
-                  select,
-                  textarea {
-                    color: #5a5a5a;
-                    font: inherit;
-                    margin: 0;
-                  }
+      button,
+      input,
+      select,
+      textarea {
+        color: #5a5a5a;
+        font: inherit;
+        margin: 0;
+      }
 
-                  input {
-                    line-height: normal;
-                  }
+      input {
+        line-height: normal;
+      }
 
-                  textarea {
-                    overflow: auto;
-                  }
+      textarea {
+        overflow: auto;
+      }
 
-                  #container {
-                    background: #f2f3eb;
-                    opacity: 0.5;
-                    border: solid 3px #474544;
-                    max-width: 768px;
-                    margin: 60px auto;
-                    position: relative;
-                  }
+      #container {
+        background: #f2f3eb;
+        opacity: 0.5;
+        border: solid 3px #474544;
+        max-width: 768px;
+        margin: 60px auto;
+        position: relative;
+      }
 
-                  form {
-                    padding: 37.5px;
-                    margin: 50px 0;
-                  }
+      form {
+        padding: 37.5px;
+        margin: 50px 0;
+      }
 
-                  h1 {
-                    color: #474544;
-                    font-size: 32px;
-                    font-weight: 700;
-                    letter-spacing: 7px;
-                    text-align: center;
-                    text-transform: uppercase;
-                  }
+      h1 {
+        color: #474544;
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: 7px;
+        text-align: center;
+        text-transform: uppercase;
+      }
 
-                  .underline {
-                    border-bottom: solid 2px #474544;
-                    margin: -0.512em auto;
-                    width: 80px;
-                  }
+      .underline {
+        border-bottom: solid 2px #474544;
+        margin: -0.512em auto;
+        width: 80px;
+      }
 
-                  .icon_wrapper {
-                    margin: 50px auto 0;
-                    width: 100%;
-                  }
+      .icon_wrapper {
+        margin: 50px auto 0;
+        width: 100%;
+      }
 
-                  .icon {
-                    display: block;
-                    fill: #474544;
-                    height: 50px;
-                    margin: 0 auto;
-                    width: 50px;
-                  }
+      .icon {
+        display: block;
+        fill: #474544;
+        height: 50px;
+        margin: 0 auto;
+        width: 50px;
+      }
 
-                  .email {
-                    float: right;
-                    width: 45%;
-                  }
+      .email {
+        float: right;
+        width: 45%;
+      }
 
-                  input[type='text'],
-                  [type='email'],
-                  select,
-                  textarea {
-                    background: none;
-                    border: none;
-                    border-bottom: solid 2px #474544;
-                    color: #474544;
-                    font-size: 1em;
-                    font-weight: 400;
-                    letter-spacing: 0.5px;
-                    margin: 0em 0 1.875em 0;
-                    padding: 0 0 0.875em 0;
-                    width: 100%;
-                    -webkit-box-sizing: border-box;
-                    -moz-box-sizing: border-box;
-                    -ms-box-sizing: border-box;
-                    -o-box-sizing: border-box;
-                    box-sizing: border-box;
-                    -webkit-transition: all 0.3s;
-                    -moz-transition: all 0.3s;
-                    -ms-transition: all 0.3s;
-                    -o-transition: all 0.3s;
-                    transition: all 0.3s;
-                  }
-                  select {
-                    text-align: center;
-            text-align-last: center;
-            -moz-text-align-last: center;
-                  }
-                  option{
-                    text-align: center;
+      input[type='text'],
+      [type='email'],
+      select,
+      textarea {
+        background: none;
+        border: none;
+        border-bottom: solid 2px #474544;
+        color: #474544;
+        font-size: 1em;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        margin: 0em 0 1.875em 0;
+        padding: 0 0 0.875em 0;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+      select {
+        text-align: center;
+        text-align-last: center;
+        -moz-text-align-last: center;
+      }
+      input[type='submit'] {
+        text-align: center;
+      }
 
-                  }
-                  input[type='submit'] {
-                    text-align: center;
-                  }
+      .submit {
+        text-align: center;
+      }
 
-                  .submit{
-                    text-align:center;
-                  }
+      input[type='text']:focus,
+      [type='email']:focus,
+      textarea:focus {
+        outline: none;
+        padding: 0 0 0.875em 0;
+      }
 
-                  input[type='text']:focus,
-                  [type='email']:focus,
-                  textarea:focus {
-                    outline: none;
-                    padding: 0 0 0.875em 0;
-                  }
+      .message {
+        float: none;
+      }
 
-                  .message {
-                    float: none;
-                  }
+      .name {
+        float: left;
+        width: 45%;
+      }
 
-                  .name {
-                    float: left;
-                    width: 45%;
-                  }
+      select {
+        background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat
+          right;
+        outline: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+      }
 
-                  select {
-                    background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat
-                      right;
-                    outline: none;
-                    -moz-appearance: none;
-                    -webkit-appearance: none;
-                  }
+      select option {
+        background-color: #474544;
+        color: #fff;
+      }
 
-                  select::-ms-expand {
-                    display: none;
-                  }
+      select::-ms-expand {
+        display: none;
+      }
 
-                  .subject {
-                    width: 100%;
-                  }
+      .subject {
+        width: 100%;
+      }
 
-                  .telephone {
-                    width: 100%;
-                  }
+      .telephone {
+        width: 100%;
+      }
 
-                  textarea {
-                    line-height: 150%;
-                    height: 150px;
-                    resize: none;
-                    width: 100%;
-                  }
+      textarea {
+        line-height: 150%;
+        height: 150px;
+        resize: none;
+        width: 100%;
+      }
 
-                  ::-webkit-input-placeholder {
-                    color: #474544;
-                  }
+      ::-webkit-input-placeholder {
+        color: #474544;
+      }
 
-                  :-moz-placeholder {
-                    color: #474544;
-                    opacity: 1;
-                  }
+      :-moz-placeholder {
+        color: #474544;
+        opacity: 1;
+      }
 
-                  ::-moz-placeholder {
-                    color: #474544;
-                    opacity: 1;
-                  }
+      ::-moz-placeholder {
+        color: #474544;
+        opacity: 1;
+      }
 
-                  :-ms-input-placeholder {
-                    color: #474544;
-                  }
+      :-ms-input-placeholder {
+        color: #474544;
+      }
 
-                  #form_button {
-                    background: none;
-                    border: solid 2px #474544;
-                    color: #474544;
-                    cursor: pointer;
-                    display: inline-block;
-                    font-family:<option value="Helvetica', Arial, sans-serif;
-                    font-size: 0.875em;
-                    font-weight: bold;
-                    outline: none;
-                    padding: 20px 35px;
-                    text-transform: uppercase;
-                    -webkit-transition: all 0.3s;
-                    -moz-transition: all 0.3s;
-                    -ms-transition: all 0.3s;
-                    -o-transition: all 0.3s;
-                    transition: all 0.3s;
-                  }
+      #simulator {
+        background: none;
+        border: solid 2px #474544;
+        color: #474544;
+        cursor: pointer;
+        display: inline-block;
+        font-family: 'Helvetica', Arial, sans-serif;
+        font-size: 0.875em;
+        font-weight: bold;
+        outline: none;
+        padding: 20px 35px;
+        text-transform: uppercase;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+      }
 
-                  #form_button:hover {
-                    background: #474544;
-                    color: #f2f3eb;
-                  }
+      #simulator:hover {
+        background: #474544;
+        color: #f2f3eb;
+      }
 
-                  @media screen and (max-width: 768px) {
-                    #container {
-                      margin: 20px auto;
-                      width: 95%;
-                    }
-                  }
+      @media screen and (max-width: 768px) {
+        #container {
+          margin: 20px auto;
+          width: 95%;
+        }
+      }
 
-                  @media screen and (max-width: 480px) {
-                    h1 {
-                      font-size: 26px;
-                    }
+      @media screen and (max-width: 480px) {
+        h1 {
+          font-size: 26px;
+        }
 
-                    .underline {
-                      width: 68px;
-                    }
+        .underline {
+          width: 68px;
+        }
 
-                    #form_button {
-                      padding: 15px 25px;
-                    }
-                  }
+        #simulator {
+          padding: 15px 25px;
+        }
+      }
 
-                  @media screen and (max-width: 420px) {
-                    h1 {
-                      font-size: 18px;
-                    }
+      @media screen and (max-width: 420px) {
+        h1 {
+          font-size: 18px;
+        }
 
-                    .icon {
-                      height: 35px;
-                      width: 35px;
-                    }
+        .icon {
+          height: 35px;
+          width: 35px;
+        }
 
-                    .underline {
-                      width: 53px;
-                    }
+        .underline {
+          width: 53px;
+        }
 
-                    input[type='text'],
-                    [type='email'],
-                    select,
-                    textarea {
-                      font-size: 0.875em;
-                    }
-                  }
-                  #result{
-                    text-align:center;
-                    margin-bottom: 30px;
-                  }
-                  .positions{
-                    font-family: "Courier New", Courier, monospace;
-                    margin-bottom: 30px;
-                  }
+        input[type='text'],
+        [type='email'],
+        select,
+        textarea {
+          font-size: 0.875em;
+        }
+      }
+      #result {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .positions {
+        font-family: 'Courier New', Courier, monospace;
+        margin-bottom: 30px;
+      }
     </style>
   </head>
   <body>
@@ -285,11 +286,11 @@
       <h1>Simulator</h1>
       <div class="underline"></div>
       <div class="icon_wrapper"></div>
-      <form action="#" method="get" id="simulator" onsubmit="fetch(); return false;">
+      <form action="#" method="get" id="fff" onsubmit="fetch(); return false;">
         <div class="formation">
           <label for="formation"></label>
           <select placeholder="Formation" name="formation" id="formation" required>
-            <option disabled hidden selected>Formation name</option>
+            <option disabled hidden selected>Opponent formation name</option>
             <option value="straight-line">Straight Line Formation</option>
             <option value="high-speed">High Speed Formation</option>
             <option value="wipe-out">Wipe Out Formation</option>
@@ -355,9 +356,15 @@
 
           Object.keys(response.target_order).forEach(function (shipType) {
             var targets = '<i>' + response.target_order[shipType].join('</i> then <i>') + '</i>';
-            contentDOMString = contentDOMString + '<div><b>' + shipType + '</b> will target: ' + targets + '</div>';
+            contentDOMString =
+              contentDOMString + '<div>your <b>' + shipType + '</b> will target opponent: ' + targets + '</div>';
           });
-          var rootDOMString = '<div><h2>In ' + response.formation.label + '</h2>' + contentDOMString + '<div>';
+          var rootDOMString =
+            '<div><img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png"><h2>In ' +
+            response.formation.label +
+            '</h2>' +
+            contentDOMString +
+            '<div>';
           resultContainer.innerHTML = rootDOMString;
         });
 

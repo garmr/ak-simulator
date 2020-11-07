@@ -7,12 +7,19 @@ export const handler: AWSLambda.Handler = async (event: AWSLambda.APIGatewayEven
     event.queryStringParameters && event.queryStringParameters.formation
       ? event.queryStringParameters.formation
       : undefined;
-  const result = await httpGetHandler.handle(formation);
+  const attackShips =
+    event.queryStringParameters && event.queryStringParameters.dds ? event.queryStringParameters.dds.split(',') : [];
+  const tankShips =
+    event.queryStringParameters && event.queryStringParameters.tanks
+      ? event.queryStringParameters.tanks.split(',')
+      : [];
+  const result = await httpGetHandler.handle(formation, attackShips, tankShips);
   const response = {
     version: process.env.VERSION,
     id: process.env.APIG_DEPLOYMENT_ID,
-    target_order: result ? result.targeting_order : 'no matching formation found',
+    target_order: result ? result.targeting_order : {},
     formation: result ? result.formation : 'no matching formation found',
+    suggestions: result ? result.suggestions.slice(0, 3) : [],
   };
 
   return {

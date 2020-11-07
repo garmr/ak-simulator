@@ -13,6 +13,7 @@ interface Ships {
 interface FlagShips {
   label: string;
   size: number;
+  weakness: string;
 }
 
 interface ShipBehaviors {
@@ -138,6 +139,7 @@ export class Battleship implements Ships {
 export class FlagShip implements FlagShips {
   label = 'flagship';
   size = 10;
+  weakness = '';
 }
 
 // Target order: Large Ships → Small Ships (Titan→Mothership→Battleship→Cruiser→Destroyer→Frigate)
